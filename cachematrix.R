@@ -1,8 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
+## The function below is used to cache the matrix
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL                                 # initializing inv as NULL
   set <- function(z){
@@ -15,7 +11,9 @@ makeCacheMatrix <- function(x = matrix()) {
   list( set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
-## Write a short comment describing this function
+## The function below is used to check if inverse is already calculated
+## if so, it returns the cached matrix for faster computations
+## if not, inverse is calculated and returned
 
 cacheSolve <- function(x, ...) {          #gets cache data
   inv <- x$getInverse()
